@@ -1,48 +1,21 @@
 <template>
-<div id="box">
+
   <el-container>
     <el-header class="t-center head-top">蔚蓝学习2.0</el-header>
     <el-main></el-main>
     <el-footer class="foot-guide">
 
       <el-row>
-      <el-col :span="12" class="grid-content foot-guide-item"><l-btn v-on:click="goLearn">我要上课</l-btn></el-col>
-      <el-col :span="12" class="grid-content foot-guide-item"><r-btn v-on:click="goTeach">我要开班</r-btn></el-col>
+      <el-col :span="12" class="grid-content foot-guide-item"><router-link to="/trainee">我要上课</router-link></el-col>
+      <el-col :span="12" class="grid-content foot-guide-item"><router-link to="#">我要开班</router-link></el-col>
       </el-row>
 
     </el-footer>
   </el-container>
-</div>
+
 </template>
 
 <script>
-import Vue from 'vue'
-(function(){
-
-  let leftButton={
-    template:'<button>我要上课</button>'
-  },rightButton={
-    template:'<button>我要开班</button>'
-  }
-
-  new Vue({
-    el:'#box',
-    components:{
-      'l-btn':leftButton,
-      'r-btn':rightButton
-    },
-    method:{
-      goLearn:function(){
-        console.log('learn');
-      },
-      goTeach:function(){
-        console.log('teach');
-      }
-    }
-  })
-
-
-})();
 
 </script>
 
@@ -56,7 +29,6 @@ import Vue from 'vue'
     width:100%;
     display:flex;
     border-top:1px solid rgba(0,0,0,0.4);
-    flex:2;
   }
 
 
@@ -73,5 +45,13 @@ import Vue from 'vue'
     color:#fff;
     line-height:60px;
   }
+  .foot-guide-item{
+    width:50%;
+  }
+  .el-row{
+    width:100%;
+    height:60px;
+    line-height:60px;
 
+  }
 </style>
