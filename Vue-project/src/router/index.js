@@ -47,6 +47,36 @@ export default new Router({
       path:'/offline-meeting-rate',
       name:'offline-meeting-rate',
       component:resolve=>require(['../components/offline-meeting/offline-meeting-rate.vue'],resolve)
+    },
+    {
+      path:'/user-bind',
+      name:'user-bind',
+      component:resolve=>require(['../components/user-bind.vue'],resolve)
+    },
+    {
+      path:'/enroll/enroll-info',
+      name:'enroll-info',
+      component:resolve=>require(['../components/enroll/enroll-info.vue'],resolve)
+    },
+    {
+      path:'/enroll/enroll-success',
+      name:'enroll-info',
+      component:resolve=>require(['../components/enroll/enroll-success.vue'],resolve)
+    },
+    {
+      path:'/register/register-info',
+      name:'register-info',
+      component:resolve=>require(['../components/register/register-info.vue'],resolve)
+    },
+    {
+      path:'/courseware/courseware',
+      name:'register-info',
+      component:resolve=>require(['../components/courseware/courseware.vue'],resolve)
+    },
+    {
+      path:'/research/research',
+      name:'register-info',
+      component:resolve=>require(['../components/research/research.vue'],resolve)
     }
   ]
 })

@@ -24,7 +24,7 @@
             <div class="training-date" v-on:click="trainingStatus=true">培训日程</div>
             <div class="training-data" v-on:click="trainingStatus=false">培训资料</div>
          </div>
-        <div class="training-date-tab" v-if="trainingStatus">
+        <div class="training-date-tab" v-if="trainingStatus===true">
           <el-collapse v-model="activeName" accordion>
             <el-collapse-item v-for="(item) in trainShedule"  v-bind:title="item.date" name="1">
               <div v-for="(ditem) in item.details">
@@ -46,7 +46,9 @@
             <el-button type="primary">报名</el-button>
           </div>
         </div>
-        <div class="training-data-tab" v-else="!trainingStatus">
+
+        <div class="training-data-tab" v-else="trainingStatus===false">
+
            <div>
              <span>培训介绍</span>
              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin elit. Aenean euismod bibendum laoreet. Proin</p>
