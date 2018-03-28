@@ -42,6 +42,11 @@ export default new Router({
       path:'/offline-meeting',
       name:'offline-meeting-main',
       component:resolve=>require(['../components/offline-meeting/offline-meeting-main.vue'],resolve)
+    },
+    {
+      path:'/offline-meeting-rate',
+      name:'offline-meeting-rate',
+      component:resolve=>require(['../components/offline-meeting/offline-meeting-rate.vue'],resolve)
     }
   ]
 })

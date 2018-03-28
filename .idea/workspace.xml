@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0b87a1a-c6ef-49aa-a068-ef790fdba0ce" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vue-project/src/components/offline-meeting/offline-meeting-main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vue-project/src/components/trainee/interests-tab.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vue-project/src/components/trainee/trainee-info.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vue-project/src/components/trainee/trainee-main.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vue-project/src/components/offline-meeting/offline-meeting-rate.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue-project/src/components/mainPage.vue" afterPath="$PROJECT_DIR$/Vue-project/src/components/mainPage.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue-project/src/components/offline-meeting/offline-meeting-main.vue" afterPath="$PROJECT_DIR$/Vue-project/src/components/offline-meeting/offline-meeting-main.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue-project/src/router/index.js" afterPath="$PROJECT_DIR$/Vue-project/src/router/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Vue-project/src/router/index.js" afterPath="$PROJECT_DIR$/dist/Vue-project/src/router/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Vue-project/src/router/index.js.map" afterPath="$PROJECT_DIR$/dist/Vue-project/src/router/index.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.npminstall.done" afterPath="$PROJECT_DIR$/node_modules/.npminstall.done" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,8 +37,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue-project/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="43" column="64" lean-forward="false" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
+            <state relative-caret-position="390">
+              <caret line="48" column="85" lean-forward="false" selection-start-line="48" selection-start-column="85" selection-end-line="48" selection-end-column="85" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <element signature="e#164#198#0" expanded="true" />
@@ -52,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="offline-meeting-main.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="offline-meeting-main.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue-project/src/components/offline-meeting/offline-meeting-main.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="45" column="40" lean-forward="false" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+            <state relative-caret-position="428">
+              <caret line="80" column="6" lean-forward="true" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#1;n#div#4;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#1;n#div#4;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
@@ -66,33 +61,19 @@
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#1;n#div#4;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#1;n#div#4;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#1;n#div#4;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#1742#1763#0" expanded="true" />
+                <element signature="e#2412#2433#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trainee-main.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue-project/src/components/trainee/trainee-main.vue">
+      <file leaf-file-name="offline-meeting-rate.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vue-project/src/components/offline-meeting/offline-meeting-rate.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="58" column="46" lean-forward="false" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="46" />
+            <state relative-caret-position="104">
+              <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trainee-info.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue-project/src/components/trainee/trainee-info.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#el-button#0;n#div#0;n#el-card#0;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#188#209#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,9 +147,10 @@
         <option value="$PROJECT_DIR$/Vue-project/src/components/mainPage.vue" />
         <option value="$PROJECT_DIR$/Vue-project/src/components/trainee/trainee-info.vue" />
         <option value="$PROJECT_DIR$/Vue-project/src/components/trainee/interests-tab.vue" />
-        <option value="$PROJECT_DIR$/Vue-project/src/router/index.js" />
         <option value="$PROJECT_DIR$/Vue-project/src/components/public/slider.vue" />
+        <option value="$PROJECT_DIR$/Vue-project/src/router/index.js" />
         <option value="$PROJECT_DIR$/Vue-project/src/components/offline-meeting/offline-meeting-main.vue" />
+        <option value="$PROJECT_DIR$/Vue-project/src/components/offline-meeting/offline-meeting-rate.vue" />
       </list>
     </option>
   </component>
@@ -190,9 +172,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="188" />
+    <option name="x" value="160" />
     <option name="y" value="32" />
-    <option name="width" value="1655" />
+    <option name="width" value="1683" />
     <option name="height" value="991" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -277,6 +259,14 @@
               <item name="dlalt" type="462c0819:PsiDirectoryNode" />
               <item name="Vue-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="trainee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dlalt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dlalt" type="462c0819:PsiDirectoryNode" />
+              <item name="Vue-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -334,12 +324,20 @@
       <workItem from="1522137493915" duration="4619000" />
       <workItem from="1522199907895" duration="307000" />
       <workItem from="1522200249208" duration="206000" />
-      <workItem from="1522200483395" duration="20546000" />
+      <workItem from="1522200483395" duration="21676000" />
     </task>
+    <task id="LOCAL-00001" summary="页面">
+      <created>1522228312781</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1522228312781</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25678000" />
+    <option name="totallyTimeSpent" value="26808000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -351,10 +349,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="188" y="32" width="1655" height="991" extended-state="0" />
+    <frame x="160" y="32" width="1683" height="991" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19418676" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18541034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916147" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -667,20 +665,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-project/src/components/trainee/trainee-info.vue">
+    <entry file="file://$PROJECT_DIR$/Vue-project/src/components/mainPage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#el-button#0;n#div#0;n#el-card#0;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="364">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-project/src/components/trainee/interests-tab.vue">
+    <entry file="file://$PROJECT_DIR$/Vue-project/src/components/public/slider.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="26" column="53" lean-forward="false" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+        <state relative-caret-position="26">
+          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -696,18 +692,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-project/src/components/mainPage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue-project/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="43" column="64" lean-forward="false" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
+        <state relative-caret-position="390">
+          <caret line="48" column="85" lean-forward="false" selection-start-line="48" selection-start-column="85" selection-end-line="48" selection-end-column="85" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
             <element signature="e#164#198#0" expanded="true" />
@@ -715,9 +703,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-project/src/components/trainee/trainee-info.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#el-button#0;n#div#0;n#el-card#0;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-project/src/components/trainee/interests-tab.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="26" column="53" lean-forward="false" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Vue-project/src/components/trainee/trainee-main.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
+        <state relative-caret-position="0">
           <caret line="58" column="46" lean-forward="false" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#div#0;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
@@ -727,18 +733,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue-project/src/components/public/slider.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue-project/src/components/offline-meeting/offline-meeting-main.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="45" column="40" lean-forward="false" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+        <state relative-caret-position="428">
+          <caret line="80" column="6" lean-forward="true" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#1;n#div#4;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#1;n#div#4;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
@@ -748,7 +746,17 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#1;n#div#4;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#1;n#div#4;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#1;n#div#4;n#el-main#0;n#el-container#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#1742#1763#0" expanded="true" />
+            <element signature="e#2412#2433#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue-project/src/components/offline-meeting/offline-meeting-rate.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding>
+            <element signature="e#188#209#0" expanded="true" />
           </folding>
         </state>
       </provider>

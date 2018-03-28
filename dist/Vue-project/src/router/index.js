@@ -64,6 +64,12 @@ exports.default = new _vueRouter2.default({
     component: function component(resolve) {
       return require(['../components/offline-meeting/offline-meeting-main.vue'], resolve);
     }
+  }, {
+    path: '/offline-meeting-rate',
+    name: 'offline-meeting-rate',
+    component: function component(resolve) {
+      return require(['../components/offline-meeting/offline-meeting-rate.vue'], resolve);
+    }
   }]
 });
 //# sourceMappingURL=index.js.map

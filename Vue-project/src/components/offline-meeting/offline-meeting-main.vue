@@ -47,7 +47,19 @@
           </div>
         </div>
         <div class="training-data-tab" v-else="!trainingStatus">
-2
+           <div>
+             <span>培训介绍</span>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin elit. Aenean euismod bibendum laoreet. Proin</p>
+           </div>
+           <div>
+             <span>培训须知和安排</span>
+             <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin elit. Aenean euismod bibendum laoreet. Proin
+             </p>
+           </div>
+           <div>
+             <el-button type="primary">请假</el-button>  <el-button type="primary"><router-link to="/offline-meeting-rate">评价</router-link></el-button>
+           </div>
         </div>
       </div>
     </el-main>
