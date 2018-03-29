@@ -70,13 +70,81 @@ export default new Router({
     },
     {
       path:'/courseware/courseware',
-      name:'register-info',
+      name:'courseware',
       component:resolve=>require(['../components/courseware/courseware.vue'],resolve)
     },
     {
       path:'/research/research',
-      name:'register-info',
+      name:'research',
       component:resolve=>require(['../components/research/research.vue'],resolve)
+    },
+    {
+      path:'/trainer',
+      name:'trainer',
+      component:resolve=>require(['../components/trainer/trainer-main.vue'],resolve)
+    },
+    {
+      path:'/trainer/start-class',
+      name:'start-class',
+      component:resolve=>require(['../components/trainer/start-class.vue'],resolve)
+    },
+    {
+      path:'/trainer/start-success',
+      name:'start-class',
+      component:resolve=>require(['../components/trainer/start-success.vue'],resolve)
+    },
+    {
+      path:'/trainer/courseware',
+      name:'courseware',
+      component:resolve=>require(['../components/trainer/courseware.vue'],resolve)
+    },
+    {
+      path:'/trainer/register',
+      name:'register',
+      component:resolve=>require(['../components/trainer/register.vue'],resolve)
+    },
+    {
+      path:'/trainer/enroll',
+      name:'enroll',
+      component:resolve=>require(['../components/trainer/enroll.vue'],resolve)
+    },
+    {
+      path:'/trainer/survey',
+      name:'survey',
+      component:resolve=>require(['../components/trainer/survey.vue'],resolve)
+    },
+    {
+      path:'/trainer/train-data',
+      name:'train-data',
+      component:resolve=>require(['../components/trainer/train-data.vue'],resolve)
+    },
+    {
+      path:'/train-data/enroll-info',
+      name:'enroll-info',
+      component:resolve=>require(['../components/trainer/enroll-info.vue'],resolve)
+    },
+    {
+      path:'/train-data/rate-info',
+      name:'rate-info',
+      component:resolve=>require(['../components/trainer/rate-info.vue'],resolve)
+    },
+    {
+      path:'/train-data/schedule-info',
+      name:'schedule-info',
+      component:resolve=>require(['../components/trainer/schedule-info.vue'],resolve)
+    },
+    {
+      path:'/train-data/schedule-add',
+      name:'schedule-add',
+      component:resolve=>require(['../components/trainer/schedule-add.vue'],resolve)
+    },{
+      path:'/train-data/questionnaire',
+      name:'questionnaire',
+      component:resolve=>require(['../components/trainer/questionnaire.vue'],resolve)
+    },{
+      path:'/train-data/questionnaire-detail',
+      name:'questionnaire',
+      component:resolve=>require(['../components/trainer/questionnaire-detail.vue'],resolve)
     }
   ]
 })

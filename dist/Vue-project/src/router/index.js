@@ -70,6 +70,126 @@ exports.default = new _vueRouter2.default({
     component: function component(resolve) {
       return require(['../components/offline-meeting/offline-meeting-rate.vue'], resolve);
     }
+  }, {
+    path: '/user-bind',
+    name: 'user-bind',
+    component: function component(resolve) {
+      return require(['../components/user-bind.vue'], resolve);
+    }
+  }, {
+    path: '/enroll/enroll-info',
+    name: 'enroll-info',
+    component: function component(resolve) {
+      return require(['../components/enroll/enroll-info.vue'], resolve);
+    }
+  }, {
+    path: '/enroll/enroll-success',
+    name: 'enroll-info',
+    component: function component(resolve) {
+      return require(['../components/enroll/enroll-success.vue'], resolve);
+    }
+  }, {
+    path: '/register/register-info',
+    name: 'register-info',
+    component: function component(resolve) {
+      return require(['../components/register/register-info.vue'], resolve);
+    }
+  }, {
+    path: '/courseware/courseware',
+    name: 'courseware',
+    component: function component(resolve) {
+      return require(['../components/courseware/courseware.vue'], resolve);
+    }
+  }, {
+    path: '/research/research',
+    name: 'research',
+    component: function component(resolve) {
+      return require(['../components/research/research.vue'], resolve);
+    }
+  }, {
+    path: '/trainer',
+    name: 'trainer',
+    component: function component(resolve) {
+      return require(['../components/trainer/trainer-main.vue'], resolve);
+    }
+  }, {
+    path: '/trainer/start-class',
+    name: 'start-class',
+    component: function component(resolve) {
+      return require(['../components/trainer/start-class.vue'], resolve);
+    }
+  }, {
+    path: '/trainer/start-success',
+    name: 'start-class',
+    component: function component(resolve) {
+      return require(['../components/trainer/start-success.vue'], resolve);
+    }
+  }, {
+    path: '/trainer/courseware',
+    name: 'courseware',
+    component: function component(resolve) {
+      return require(['../components/trainer/courseware.vue'], resolve);
+    }
+  }, {
+    path: '/trainer/register',
+    name: 'register',
+    component: function component(resolve) {
+      return require(['../components/trainer/register.vue'], resolve);
+    }
+  }, {
+    path: '/trainer/enroll',
+    name: 'enroll',
+    component: function component(resolve) {
+      return require(['../components/trainer/enroll.vue'], resolve);
+    }
+  }, {
+    path: '/trainer/survey',
+    name: 'survey',
+    component: function component(resolve) {
+      return require(['../components/trainer/survey.vue'], resolve);
+    }
+  }, {
+    path: '/trainer/train-data',
+    name: 'train-data',
+    component: function component(resolve) {
+      return require(['../components/trainer/train-data.vue'], resolve);
+    }
+  }, {
+    path: '/train-data/enroll-info',
+    name: 'enroll-info',
+    component: function component(resolve) {
+      return require(['../components/trainer/enroll-info.vue'], resolve);
+    }
+  }, {
+    path: '/train-data/rate-info',
+    name: 'rate-info',
+    component: function component(resolve) {
+      return require(['../components/trainer/rate-info.vue'], resolve);
+    }
+  }, {
+    path: '/train-data/schedule-info',
+    name: 'schedule-info',
+    component: function component(resolve) {
+      return require(['../components/trainer/schedule-info.vue'], resolve);
+    }
+  }, {
+    path: '/train-data/schedule-add',
+    name: 'schedule-add',
+    component: function component(resolve) {
+      return require(['../components/trainer/schedule-add.vue'], resolve);
+    }
+  }, {
+    path: '/train-data/questionnaire',
+    name: 'questionnaire',
+    component: function component(resolve) {
+      return require(['../components/trainer/questionnaire.vue'], resolve);
+    }
+  }, {
+    path: '/train-data/questionnaire-detail',
+    name: 'questionnaire',
+    component: function component(resolve) {
+      return require(['../components/trainer/questionnaire-detail.vue'], resolve);
+    }
   }]
 });
 //# sourceMappingURL=index.js.map

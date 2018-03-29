@@ -16,11 +16,13 @@ var _elementUi = require('element-ui');
 
 var _elementUi2 = _interopRequireDefault(_elementUi);
 
+require('./assets/css/main.css');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// The Vue build version to load with the `import` command
+_vue2.default.config.productionTip = false; // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-_vue2.default.config.productionTip = false;
+
 _vue2.default.use(_elementUi2.default);
 /* eslint-disable no-new */
 new _vue2.default({
