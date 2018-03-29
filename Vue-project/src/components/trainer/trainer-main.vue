@@ -3,40 +3,39 @@
   <el-container>
     <el-header class="t-center head-top">我要开课</el-header>
     <el-main>
-       <el-row>
-         <el-col :span="12"><div class="grid-content bg-purple"><router-link to="/trainer/start-class">快速开班</router-link></div></el-col>
-         <el-col :span="12"><div class="grid-content bg-purple-light"><router-link to="/trainer/start-class">快速开会</router-link></div></el-col>
+       <el-row :gutter="20">
+         <el-col :span="12"><div class="bg-purple big-tab"><router-link to="/trainer/start-class">快速开班</router-link></div></el-col>
+         <el-col :span="12"><div class="bg-purple big-tab"><router-link to="/trainer/start-class">快速开会</router-link></div></el-col>
        </el-row>
-       <el-row>
-         <el-col :span="6"><div class="grid-content bg-purple"><router-link to="/trainer/register">签到</router-link></div></el-col>
-         <el-col :span="6"><div class="grid-content bg-purple-light"><router-link to="/trainer/enroll">报名</router-link></div></el-col>
-         <el-col :span="6"><div class="grid-content bg-purple"><router-link to="/trainer/courseware">课件</router-link></div></el-col>
-         <el-col :span="6"><div class="grid-content bg-purple-light"><router-link to="/trainer/survey">调研</router-link></div></el-col>
+       <el-row class="mt1" :gutter="10">
+         <el-col :span="6"><div class="bg-purple-light middle-tab"><router-link to="/trainer/register">签到</router-link></div></el-col>
+         <el-col :span="6"><div class="bg-purple-light  middle-tab"><router-link to="/trainer/enroll">报名</router-link></div></el-col>
+         <el-col :span="6"><div class="bg-purple-light  middle-tab"><router-link to="/trainer/courseware">课件</router-link></div></el-col>
+         <el-col :span="6"><div class="bg-purple-light  middle-tab"><router-link to="/trainer/survey">调研</router-link></div></el-col>
        </el-row>
-      <el-tabs type="border-card">
+      <el-tabs type="border-card" class="mt1" >
         <el-tab-pane label="用户管理">
           <span slot="label"><i class="el-icon-date"></i> 已开课程</span>
-          <el-row v-for="(item) in courses">
+          <el-row v-for="(item) in courses"  class="mt1 bb p10">
             <el-col :span="4">
-              <div class="grid-content bg-purple">
-                <router-link to="/trainer/train-data"><img src="../../../build/logo.png" width="40" height="40">{{item.img}}</router-link>
-
+              <div>
+                <router-link to="/trainer/train-data"><img src="../../../build/logo.png" width="40" height="40"></router-link>
               </div>
             </el-col>
             <el-col :span="12">
-              <div class="grid-content bg-purple-light">
-              <p>{{item.name}}</p>
-              <p>{{item.type}}</p>
-              </div>
+
+              <div class="list-title">{{item.name}}</div>
+              <div class="list-sub">{{item.type}}</div>
+
             </el-col>
             <el-col :span="8">
-              <div class="grid-content bg-purple">
-                 {{item.qrCode}}
+              <div>
+                <div><img src="../../../src/assets/qrcode.png" width="40" height="40"></div>
               </div>
             </el-col>
           </el-row>
-          <el-row>
-               <router-link to="#">查看更多</router-link>
+          <el-row class="mt1">
+               <router-link to="#" class="view-more">查看更多</router-link>
           </el-row>
 
         </el-tab-pane>
@@ -62,9 +61,9 @@
           </el-row>
         </el-tab-pane>
       </el-tabs>
-      <el-row>
-         <router-link to="././trainee-info">用户信息</router-link>
-         <router-link to="#">数据</router-link>
+      <el-row class="corner-btn">
+         <router-link to="././trainee-info"><i class="el-icon-view"></i></router-link>
+         <router-link to="#"><i class="el-icon-share"></i></router-link>
       </el-row>
     </el-main>
 
@@ -73,6 +72,7 @@
 </template>
 <script>
   import Vue from 'vue'
+
   export default {
     data(){
       return{
@@ -80,18 +80,18 @@
          {
            name:'培训1',
            type:'类型1',
-           qrCode:'二维码1',
-           img:'pic1'
+           qrCode:'../src/assets/qrcode.png',
+
          },{
              name:'培训2',
              type:'类型2',
-             qrCode:'二维码2',
-             img:'pic2'
+             qrCode:'./build/qrcode.png',
+
          },{
              name:'培训3',
              type:'类型3',
-             qrCode:'二维码3',
-             img:'pic3'
+             qrCode:'./build/qrcode.png',
+
          }
          ],
         tools:[
@@ -122,5 +122,12 @@
 </script>
 
 <style scoped>
-
+  .corner-btn{
+    position:fixed;
+    right:20px;
+    bottom:40px;
+  }
+  .corner-btn i{
+    font-size:1.4em;
+  }
 </style>

@@ -5,20 +5,17 @@
       <el-main>
 
 
-        <div style="overflow:hidden">
+        <div>
           <el-row :gutter="10">
-            <el-col :xs="16" :sm="12" :md="8" :lg="6" :xl="2">
-              <div class="grid-content bg-purple">
-                 <img src="../../../build/logo.png">
+            <el-col :span="4">
+              <div class="bg-purple">
+                 <img src="../../../build/logo.png" width="50" height="50">
               </div>
             </el-col>
-            <el-col :xs="8" :sm="12" :md="16" :lg="18" :xl="22">
-              <div class="grid-content bg-purple-light">
-                <el-row v-for="(item,index) in userinfo">
-                  <!--<div v-for="o in data" :key="o" class="text item">-->
-                    <!---->
-                  <!--</div>-->
-                  <el-col class="el-col-12">{{item}}</el-col>
+            <el-col :span="20">
+              <div class="bg-purple-light" v-model="userInfo">
+                <el-row v-for="(item,index) in userInfo">
+                  <el-col class="el-col-12 list-item">{{item}}</el-col>
 
                 </el-row>
               </div>
@@ -30,22 +27,22 @@
             一周日期
         </div>
         <!--有课程-->
-        <div  v-show="isCoursed">
-        <div class="meetinfo-box"   v-for="(item,index) in meetinfo">
-                 <div>
-                     <img src="../../../build/logo.png">
-                 </div>
-                   <div>
-                     <dl>
-                       <li v-for="(liItem) in item">{{liItem}}</li>
-                     </dl>
-                   </div>
-                 <div>
-                   <router-link v-bind:to="item.url">查看详情</router-link>
-                 </div>
+        <div  v-show="isCoursed" v-model="meetInfo">
+            <el-row class="meetinfo-box bb p10" :gutter="20"  v-for="(item,index) in meetInfo">
+                 <el-col :span="4" style="vertical-align: middle" >
+                     <img src="../../../build/logo.png" width="50" height="50" >
+                 </el-col>
+                   <el-col :span="14">
+                     <el-row>
+                       <el-col class="meetList-item" v-for="(val) in item">{{val}}</el-col>
+                     </el-row>
+                   </el-col>
+                 <el-col :span="6">
+                   <router-link v-bind:to="item.url" class="meetList-view">查看详情</router-link>
+                 </el-col>
 
 
-            </div>
+            </el-row>
         </div>
         <!--无课程-->
         <div v-show="!isCoursed" >
@@ -53,21 +50,20 @@
             今日无安排
           </div>
         <div>如果你是学霸</div>
-        <div class="meetinfo-box"  v-for="(item,index) in recommend">
+        <div class="meetinfo-box  bb p10" :gutter="20"  v-for="(item,index) in recommend">
 
-          <div>
-            <img src="../../../build/logo.png">
-          </div>
+          <el-row>
+            <el-col :span="8">
+            <img src="../../../build/logo.png" width="50" height="50">
+            </el-col>
 
-          <div>
-            <dl>
-              <li v-for="(liItem) in item">{{liItem}}</li>
-            </dl>
+            <el-col :span="16">
+              <el-row>
+                <el-col class="meetList-item" v-for="(val) in item">{{val}}</el-col>
+              </el-row>
+            </el-col>
 
-          </div>
-          <div>
-            <router-link v-bind:to="item.url">查看详情</router-link>
-          </div>
+          </el-row>
 
 
         </div>
@@ -85,26 +81,26 @@
      data(){
        return{
          isCoursed:false,
-         userinfo:{
-           username:'学员姓名',
-           userapart:'学员部门',
-           userphone:'学员号码'
+         userInfo:{
+           userName:'学员姓名',
+           userApart:'学员部门',
+           userPhone:'学员号码'
          },
-         meetinfo:{
+         meetInfo:{
            1:{
-             meetname:'财务会议',
+             meetName:'财务会议',
              time:'10:00',
              state:'已结束',
              url:'#'
            },
            2:{
-             meetname:'安全会议',
+             meetName:'安全会议',
              time:'14:00',
              state:'进行中',
              url:'#'
            },
            3:{
-             meetname:'技能培训',
+             meetName:'技能培训',
              time:'16:00',
              state:'未开始',
              url:'#'
@@ -112,12 +108,12 @@
          },
          recommend:{
            1:{
-             title:'培训标题',
+             title:'培训标题培训标题',
              type:'培训类型',
              time:'培训时间'
            },
            2:{
-             title:'会议标题',
+             title:'会议标题会议标题',
              type:'会议类型',
              time:'会议时间'
            }
@@ -130,62 +126,37 @@
 </script>
 
 <style scoped>
-  .foot-guide{
-    background:#fff;
-    position:fixed;
-    left:0;
-    bottom:0;
-    width:100%;
-    display:flex;
-    border-top:1px solid rgba(0,0,0,0.4);
-  }
 
 
-  .t-center{
-    text-align:center;
-  }
-  .head-top{
-    background:#3190e8;
-    position:fixed;
-    z-index:100;
-    top:0;
-    left:0;
-    width:100%;
-    color:#fff;
-    line-height:60px;
-  }
-  .foot-guide-item{
-    width:50%;
-  }
-  .el-row{
-    width:100%;
-    height:60px;
-    line-height:60px;
-  }
-  .el-col {
-    border-radius: 4px;
-  }
-  .bg-purple-dark {
-    background: #99a9bf;
-  }
   .bg-purple {
     background: #d3dce6;
   }
   .bg-purple-light {
     background: #e5e9f2;
   }
-  .grid-content {
-    border-radius: 4px;
-    min-height: 36px;
-  }
+
   .meetinfo-box{
     display:flex;
     flex-flow: row;
+    border:1px solid #DCDFE6;
+    border-radius:4px;
+    margin:10px 0px;
   }
-  .meetinfo-img{
-
+  .list-item{
+    height:30px;
+    line-height:30px;
+    text-align:left;
+    /*padding:10px 0px;*/
+    font-size:0.8em;
+    text-indent:0.8em;
   }
-  ul,li{
-    list-style-type: none;
+  .meetList-item{
+    padding:6px 0px;
+    font-size:0.8em;
+    text-align: left;
+  }
+  .meetList-view{
+    color:#409EFF;
+    font-size:0.6em;
   }
 </style>

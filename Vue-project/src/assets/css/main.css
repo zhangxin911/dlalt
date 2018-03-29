@@ -23,7 +23,7 @@ ul,li{
 }
 
 .grid-content {
-  border-radius: 4px;
+
   min-height: 36px;
 }
 .foot-guide{
@@ -38,3 +38,52 @@ ul,li{
 .foot-guide-item{
   width:50%;
 }
+a{
+  text-decoration: none;
+}
+a:link{
+  color:#303133;
+}
+a:visited{
+  color:#303133;
+}
+.br{
+  border-right:1px solid ;
+}
+.bb{
+  border-bottom:1px solid #DCDFE6;
+}
+.welcome{
+  font-size:3em;
+}
+.big-tab{
+  padding:2em 0em;
+  border-radius:4px;
+  font-size:1.2em;
+}
+.middle-tab{
+  padding:1.4em 0em;
+  border-radius:4px;
+  font-size:0.6em;
+}
+.mt1{
+  margin-top:1em;
+}
+.p10{
+  padding:10px 0px;
+}
+.list-title{
+  font-size:1.2em;
+  text-align: left;
+  color:#606266;
+}
+.list-sub{
+  font-size:0.6em;
+  text-align: left;
+  color:#909399;
+}
+a.view-more{
+  color:#409EFF;
+  font-size:0.8em;
+}
+

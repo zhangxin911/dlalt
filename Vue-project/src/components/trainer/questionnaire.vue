@@ -17,7 +17,7 @@ export default {
        questionnaire:[
        {
          name:'阶段问卷1',
-         url:'#'
+         url:'/train-data/questionnaire-detail'
        },{
            name:'阶段问卷2',
            url:'#'

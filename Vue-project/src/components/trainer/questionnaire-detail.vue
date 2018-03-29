@@ -16,7 +16,7 @@
 
        </el-row>
        <el-row>
-         <el-button type="primary">返回</el-button>
+         <el-button type="primary"><router-link to="/train-data/questionnaire">返回</router-link></el-button>
        </el-row>
     </el-main>
   </el-container>

@@ -2,13 +2,16 @@
 
   <el-container>
     <el-header class="t-center head-top">蔚蓝学习2.0</el-header>
-    <el-main></el-main>
+    <el-main>
+      <img src="../../build/logo.png" width="200" height="200">
+      <el-row>
+        <p class="welcome">Welcome!</p>
+      </el-row>
+    </el-main>
     <el-footer class="foot-guide">
 
-      <el-row>
-      <el-col :span="12" class="grid-content foot-guide-item"><router-link to="/trainee">我要上课</router-link></el-col>
-      <el-col :span="12" class="grid-content foot-guide-item"><router-link to="#">我要开班</router-link></el-col>
-      </el-row>
+      <el-col :span="12" class="grid-content foot-guide-item bg-border-lighter br"><router-link to="/trainee">我要上课</router-link></el-col>
+      <el-col :span="12" class="grid-content foot-guide-item"><router-link to="/trainer">我要开班</router-link></el-col>
 
     </el-footer>
   </el-container>
@@ -47,11 +50,8 @@
   }
   .foot-guide-item{
     width:50%;
-  }
-  .el-row{
-    width:100%;
     height:60px;
     line-height:60px;
-
   }
+
 </style>
