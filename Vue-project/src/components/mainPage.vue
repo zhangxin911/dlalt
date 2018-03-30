@@ -5,7 +5,9 @@
     <el-main>
       <img src="../../build/logo.png" width="200" height="200">
       <el-row>
-        <p class="welcome">Welcome!</p>
+        <p class="welcome" v-on:click="changeUser">Welcome!</p>
+        <p class="welcome">{{store.state.word}}</p>
+
       </el-row>
     </el-main>
     <el-footer class="foot-guide">
@@ -19,6 +21,19 @@
 </template>
 
 <script>
+  import store from '../vuex/store'
+  export default{
+    data(){
+      return{
+        store
+      }
+    },
+    methods:{
+      changeUser(){
+         store.state.word='has changed!';
+      }
+    }
+  }
 
 </script>
 
