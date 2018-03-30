@@ -1,10 +1,13 @@
 <template>
   <el-container>
-    <el-header class="t-center head-top">评价信息</el-header>
+    <el-header class="t-center head-top">
+      <router-link to="/trainer/train-data"><i class="el-icon-arrow-left icon-back"></i></router-link>
+      评价信息</el-header>
     <el-main>
       <el-tabs v-model="activeName">
         <el-tab-pane v-for="(item) in rateData"  v-bind:label="item.title" v-bind:name="item.acName">
-             <el-row v-for="(val) in item.content">
+             <el-row v-for="(val) in item.content" class="mt1">
+               <el-row class="mt1 t-left" >
                <el-col :span="4">{{val.user}}</el-col>
                <el-col :span="20"><el-rate
                  v-model="val.rate"
@@ -14,11 +17,14 @@
                  v-bind:score-template="val.rate">
                </el-rate>
                </el-col>
+               </el-row>
+               <el-row class="mt1 t-left sub-title" >
                <el-col :span="24">{{val.comment}}</el-col>
-               <el-col :span="24">{{val.time}}</el-col>
+               <el-col :span="24" class="t-right">{{val.time}}</el-col>
+               </el-row>
              </el-row>
         </el-tab-pane>
-        <el-row>
+        <el-row class="mt1">
           <el-button><router-link to="#">提醒评价</router-link></el-button>
           <el-button type="primary" ><router-link to="/trainer/train-data">返回</router-link></el-button>
         </el-row>
@@ -58,7 +64,7 @@
                }
              ]
           },{
-            title:'课程管理',
+            title:'讲师授课',
             acName:'second',
             content:[
               {
@@ -81,7 +87,7 @@
               }
             ]
           },{
-            title:'课程管理',
+            title:'综合服务',
             acName:'third',
             content:[
               {
@@ -110,3 +116,16 @@
 
   }
 </script>
+<style>
+  .t-left{
+    text-align:left;
+  }
+  .t-right{
+    text-align:right;
+  }
+  .sub-title{
+    font-size:0.8em;
+    text-align: left;
+    color:#909399;
+  }
+</style>

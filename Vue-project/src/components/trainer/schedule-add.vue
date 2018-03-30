@@ -1,13 +1,15 @@
 <template>
   <el-container>
-    <el-header class="t-center head-top">日程管理</el-header>
+    <el-header class="t-center head-top">
+      <router-link to="/train-data/schedule-info"><i class="el-icon-arrow-left icon-back"></i></router-link>
+      日程管理
+    </el-header>
     <el-main>
       <el-row>
-        <el-form ref="form" :model="form" label-width="80px">
+        <el-form ref="form" :model="form" label-width="50px">
           <el-form-item label="标题">
             <el-input v-model="form.name"></el-input>
           </el-form-item>
-
           <el-form-item label="日期">
             <el-col>
               <el-date-picker type="date" placeholder="选择日期" v-model="form.date1" style="width: 100%;"></el-date-picker>
@@ -25,11 +27,11 @@
           <el-form-item label="地点">
             <el-input type="textarea" v-model="form.desc"></el-input>
           </el-form-item>
-          <el-form-item>
-            <el-button><router-link to="/train-data/schedule-info">取消</router-link></el-button>
-            <el-button type="primary" >立即创建</el-button>
-          </el-form-item>
         </el-form>
+      </el-row>
+      <el-row>
+        <el-button><router-link to="/train-data/schedule-info">取消</router-link></el-button>
+        <el-button type="primary" >立即创建</el-button>
       </el-row>
     </el-main>
 

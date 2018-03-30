@@ -10,12 +10,12 @@
         <div>
           <el-row :gutter="10" type="flex" align="middle">
             <el-col :span="4">
-              <div class="bg-purple">
+              <div>
                  <img src="../../../build/logo.png" width="50" height="50">
               </div>
             </el-col>
             <el-col :span="18">
-              <div class="bg-purple-light" v-model="userInfo">
+              <div v-model="userInfo">
                 <el-row v-for="(item,index) in userInfo">
                   <el-col class="el-col-12 list-item">{{item}}</el-col>
 

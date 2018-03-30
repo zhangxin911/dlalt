@@ -1,10 +1,12 @@
 <template>
   <el-container>
-    <el-header class="t-center head-top">问卷管理</el-header>
+    <el-header class="t-center head-top">
+      <router-link to="/trainer/train-data"><i class="el-icon-arrow-left icon-back"></i></router-link>
+      问卷管理</el-header>
     <el-main>
-       <el-row v-for="(item) in questionnaire">
-           <el-col :span="12">{{item.name}}</el-col>
-           <el-col :span="12"><router-link v-bind:to="item.url"><i class="el-icon-arrow-right"></i></router-link></el-col>
+       <el-row v-for="(item) in questionnaire" class="mt1" :gutter="20">
+           <el-col :span="12" class="t-left">{{item.name}}</el-col>
+           <el-col :span="12" class="t-right"><router-link v-bind:to="item.url"><i class="el-icon-arrow-right"></i></router-link></el-col>
        </el-row>
     </el-main>
   </el-container>
@@ -26,3 +28,11 @@ export default {
   }
 }
 </script>
+<style>
+  .t-left{
+    text-align:left;
+  }
+  .t-right{
+    text-right:right;
+  }
+</style>
