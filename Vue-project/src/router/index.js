@@ -1,8 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import mainPage from '@/components/mainPage'
-// import elementJs from './assets/element-ui/js/index.js'
-//
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 
@@ -60,7 +57,7 @@ export default new Router({
     },
     {
       path:'/enroll/enroll-success',
-      name:'enroll-info',
+      name:'enroll-success',
       component:resolve=>require(['../components/enroll/enroll-success.vue'],resolve)
     },
     {
@@ -90,7 +87,7 @@ export default new Router({
     },
     {
       path:'/trainer/start-success',
-      name:'start-class',
+      name:'start-success',
       component:resolve=>require(['../components/trainer/start-success.vue'],resolve)
     },
     {

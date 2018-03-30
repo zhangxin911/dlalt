@@ -1,6 +1,8 @@
 <template>
   <el-container>
-    <el-header class="t-center head-top">调研</el-header>
+    <el-header class="t-center head-top">
+      <router-link to="/trainer"><i class="el-icon-arrow-left icon-back"></i></router-link>
+      调研</el-header>
     <el-main>
       <el-row>
         <p>课件主题</p>

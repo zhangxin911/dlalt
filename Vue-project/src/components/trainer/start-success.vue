@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header class="t-center head-top">我要开课</el-header>
+    <el-header class="t-center head-top">报名成功</el-header>
     <el-main>
        开班成功
 

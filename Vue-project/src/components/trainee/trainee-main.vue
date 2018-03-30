@@ -1,24 +1,30 @@
 <template>
 
     <el-container>
-      <el-header class="t-center head-top">日程表</el-header>
+      <el-header class="t-center head-top">
+        <router-link to="/"><i class="el-icon-arrow-left icon-back"></i></router-link>日程表
+      </el-header>
       <el-main>
 
 
         <div>
-          <el-row :gutter="10">
+          <el-row :gutter="10" type="flex" align="middle">
             <el-col :span="4">
               <div class="bg-purple">
                  <img src="../../../build/logo.png" width="50" height="50">
               </div>
             </el-col>
-            <el-col :span="20">
+            <el-col :span="18">
               <div class="bg-purple-light" v-model="userInfo">
                 <el-row v-for="(item,index) in userInfo">
                   <el-col class="el-col-12 list-item">{{item}}</el-col>
 
                 </el-row>
               </div>
+            </el-col>
+            <el-col :span="2">
+
+             <router-link to="/trainee-info"><i class="el-icon-arrow-right "></i></router-link>
             </el-col>
 
           </el-row>
@@ -28,7 +34,7 @@
         </div>
         <!--有课程-->
         <div  v-show="isCoursed" v-model="meetInfo">
-            <el-row class="meetinfo-box bb p10" :gutter="20"  v-for="(item,index) in meetInfo">
+            <el-row class="meetinfo-box bb p10" :gutter="20"  v-for="(item,index) in meetInfo"  type="flex" align="middle">
                  <el-col :span="4" style="vertical-align: middle" >
                      <img src="../../../build/logo.png" width="50" height="50" >
                  </el-col>
@@ -80,7 +86,7 @@
    export default {
      data(){
        return{
-         isCoursed:false,
+         isCoursed:true,
          userInfo:{
            userName:'学员姓名',
            userApart:'学员部门',
@@ -91,19 +97,19 @@
              meetName:'财务会议',
              time:'10:00',
              state:'已结束',
-             url:'#'
+             url:'/offline-meeting'
            },
            2:{
              meetName:'安全会议',
              time:'14:00',
              state:'进行中',
-             url:'#'
+             url:'/offline-meeting'
            },
            3:{
              meetName:'技能培训',
              time:'16:00',
              state:'未开始',
-             url:'#'
+             url:'/offline-meeting'
            }
          },
          recommend:{

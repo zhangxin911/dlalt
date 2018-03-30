@@ -1,69 +1,74 @@
 <template>
 
   <el-container>
-    <el-header class="t-center head-top">培训/会议详情</el-header>
+    <el-header class="t-center head-top">
+      <router-link to="/trainee"><i class="el-icon-arrow-left icon-back"></i></router-link>培训/会议详情
+    </el-header>
     <el-main>
 
-      <div>
-        <p>培训标题</p>
-      </div>
+      <el-row>培训标题</el-row>
 
-      <div>
-         <img src="../../../build/logo.png">
-      </div>
-      <div>
-       <p>培训时间：{{meettime}}</p>
-       <p>培训地点：{{meetplace}}</p>
-      </div>
-
-      <div>
-        <p v-on:click="showed=!showed">+</p>
-      </div>
-      <div v-show="showed">
-         <div class="tab-title">
+      <el-row><img src="../../../build/logo.png"></el-row>
+      <el-row class="meetTime mt1">
+        <el-col :span="6">培训时间：</el-col><el-col :span="18" v-model="meetTime">{{meetTime}}</el-col>
+      </el-row>
+      <el-row class="meetPlace mt1">
+        <el-col :span="6">培训地点：</el-col><el-col :span="18" v-model="meetPlace">{{meetPlace}}</el-col>
+      </el-row>
+      <el-row class="view-more">
+        <p v-on:click="showed=!showed">展开更多+</p>
+      </el-row>
+      <el-row v-show="showed">
+         <el-row class="tab-title">
             <div class="training-date" v-on:click="trainingStatus=true">培训日程</div>
             <div class="training-data" v-on:click="trainingStatus=false">培训资料</div>
-         </div>
-        <div class="training-date-tab" v-if="trainingStatus===true">
+         </el-row>
+        <el-row class="training-date-tab" v-if="trainingStatus===true">
           <el-collapse v-model="activeName" accordion>
-            <el-collapse-item v-for="(item) in trainShedule"  v-bind:title="item.date" name="1">
-              <div v-for="(ditem) in item.details">
-              <div style="display:flex;flex-direction:row">
-                 <div style="width:45%">{{ditem.name}}</div>
-                 <div style="width:45%">{{ditem.teacher}}</div>
-                 <div style="width:10%">{{ditem.state}}</div>
-              </div>
-              <div style="display:flex;flex-direction:row">
-                <div style="width:45%">{{ditem.time}}</div>
-                <div style="width:45%">{{ditem.place}}</div>
-                <div style="width:10%"> </div>
-              </div>
-              </div>
+            <el-collapse-item v-for="(item) in trainShedule"  v-model="trainShedule" v-bind:title="item.date" name="1">
+              <el-row v-for="(val) in item.details">
+                 <el-row class="mt1" >
+                 <el-col :span="8" class="trainShedule-title">{{val.name}}</el-col>
+                 <el-col :span="8" class="trainShedule-title">{{val.teacher}}</el-col>
+                 <el-col :span="8" class="trainShedule-title">{{val.state}}</el-col>
+                 </el-row>
+                <el-row >
+                <el-col  :span="8" class="trainShedule-content">{{val.time}}</el-col>
+                <el-col  :span="8" class="trainShedule-content">{{val.place}}</el-col>
+
+               </el-row>
+              </el-row>
             </el-collapse-item>
 
           </el-collapse>
-          <div>
-            <el-button type="primary">报名</el-button>
-          </div>
-        </div>
+          <el-row class="mt1">
+            <el-button type="primary"><router-link to="/enroll/enroll-info">报名</router-link></el-button>
+          </el-row>
+        </el-row>
 
-        <div class="training-data-tab" v-else="trainingStatus===false">
+        <el-row class="training-data-tab" v-else="trainingStatus===false">
 
-           <div>
-             <span>培训介绍</span>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin elit. Aenean euismod bibendum laoreet. Proin</p>
-           </div>
-           <div>
-             <span>培训须知和安排</span>
-             <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin elit. Aenean euismod bibendum laoreet. Proin
-             </p>
-           </div>
-           <div>
-             <el-button type="primary">请假</el-button>  <el-button type="primary"><router-link to="/offline-meeting-rate">评价</router-link></el-button>
-           </div>
-        </div>
-      </div>
+           <el-row class="mt1">
+             <el-col :span="14" class="trainingList-title">培训介绍</el-col>
+           </el-row>
+           <el-row class="mt1">
+             <el-col :span="24" class="trainingList-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin elit. Aenean euismod bibendum laoreet. Proin</el-col>
+           </el-row>
+           <el-row class="mt1">
+             <el-col :span="14" class="trainingList-title">培训须知和安排</el-col>
+           </el-row>
+          <el-row class="mt1">
+            <el-col :span="24" class="trainingList-content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin elit. Aenean euismod bibendum laoreet. Proin
+            </el-col>
+           </el-row>
+
+           <el-row class="mt1">
+             <el-button type="primary">请假</el-button>
+             <el-button type="primary"><router-link to="/offline-meeting-rate">评价</router-link></el-button>
+           </el-row>
+        </el-row>
+      </el-row>
     </el-main>
 
   </el-container>
@@ -76,8 +81,8 @@
     components: {ElButton},
     data(){
       return{
-         meettime:`${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()}`,
-         meetplace:'nj',
+         meetTime:`${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()}`,
+         meetPlace:'nj',
          showed:true,
          trainingStatus:true,
          activeName: '1',
@@ -142,19 +147,6 @@
 
 <style scoped>
 
-  .t-center{
-    text-align:center;
-  }
-  .head-top{
-    background:#3190e8;
-    position:fixed;
-    z-index:100;
-    top:0;
-    left:0;
-    width:100%;
-    color:#fff;
-    line-height:60px;
-  }
   .tab-title{
     display:flex;
     flex-direction:row;
@@ -165,5 +157,26 @@
 
   ul,li{
     list-style-type: none;
+  }
+  .meetTime,.meetPlace{
+    font-size:0.8em;
+  }
+ .trainingList-title{
+   font-size:0.8em;
+   text-align: left;
+   color:#606266;
+ }
+ .trainingList-content{
+   font-size:0.6em;
+   text-align: left;
+   color:#606266;
+ }
+  .trainShedule-title{
+    font-size:1em;
+    color:#606266;
+  }
+  .trainShedule-content{
+    font-size:0.8em;
+    color:#909399;
   }
 </style>

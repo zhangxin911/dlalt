@@ -1,6 +1,7 @@
 <template>
   <el-container>
-    <el-header class="t-center head-top">个人信息</el-header>
+    <el-header class="t-center head-top">
+      <router-link to="/trainee"><i class="el-icon-arrow-left icon-back"></i></router-link>个人信息</el-header>
     <el-main>
       <el-card class="box-card">
         <div slot="header" class="clearfix">
@@ -29,8 +30,9 @@
               {{userInfo.status}}
             </el-form-item>
             <el-form-item label="兴趣标签" >
-              <el-tag style="margin:0px 2px" v-for="(item) in userInfo.interest">{{item}}</el-tag>
+              <el-tag style="margin:0px 2px" size="medium" v-for="(item) in userInfo.interest">{{item}}</el-tag>
             </el-form-item>
+
             <el-row>
               <router-link to="trainee/interests-tab" class="interests-choose">标签选择</router-link>
             </el-row>

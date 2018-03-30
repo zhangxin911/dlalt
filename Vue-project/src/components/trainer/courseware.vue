@@ -1,6 +1,8 @@
 <template>
   <el-container>
-    <el-header class="t-center head-top">课件工具</el-header>
+    <el-header class="t-center head-top">
+      <router-link to="/trainer"><i class="el-icon-arrow-left icon-back"></i></router-link>
+      课件工具</el-header>
     <el-main>
       <el-form ref="form" :model="form" label-width="80px">
         <el-form-item label="课件主题">
@@ -27,13 +29,12 @@
         </el-form-item>
 
 
-        <el-form-item>
-
-          <el-button><router-link to="/trainer">取消发布</router-link></el-button>
-          <el-button type="primary" @click="onSubmit">确认发布</el-button>
-        </el-form-item>
       </el-form>
 
+      <el-row>
+        <el-button><router-link to="/trainer">取消发布</router-link></el-button>
+        <el-button type="primary" @click="onSubmit">确认发布</el-button>
+      </el-row>
     </el-main>
   </el-container>
 </template>

@@ -1,32 +1,29 @@
 <template>
   <el-container>
-    <el-header class="t-center head-top">我要开课</el-header>
+    <el-header class="t-center head-top">
+      <router-link to="/trainer"><i class="el-icon-arrow-left icon-back"></i></router-link>
+      快速开班</el-header>
     <el-main>
       <el-row>
         <img src="../../../build/logo.png">
         <p>点击图片可更换海报</p>
       </el-row>
-      <el-row :gutter="10">
-        <el-col :span="6"><div class="grid-content bg-purple">
-            会议标题
-        </div></el-col>
-        <el-col :span="18"><div class="grid-content bg-purple">
-          <el-input v-model="input" placeholder="请输入内容"></el-input>
-        </div></el-col>
 
-      </el-row>
-      <el-row :gutter="10">
-        <el-col :span="6"><div class="grid-content bg-purple">
-          时间跨度
-        </div></el-col>
-        <el-col :span="18"><div class="grid-content bg-purple">
-          <el-col :span="10"><el-input v-model="input" placeholder="开始时间"></el-input></el-col>
-          <el-col :span="4">至</el-col>
-          <el-col :span="10"> <el-input v-model="input" placeholder="请输入内容"></el-input></el-col>
-        </div>
-        </el-col>
+      <el-form ref="form" label-width="80px">
+         <el-form-item label="会议标题">
+           <el-input placeholder="请输入内容"></el-input>
+         </el-form-item>
+        <el-form-item label="时间跨度">
+          <el-col :span="11">
+            <el-date-picker type="fixed-time" placeholder="选择时间" v-model="form.date1" style="width: 100%;"></el-date-picker>
+          </el-col>
+          <el-col class="line" :span="2">-</el-col>
+          <el-col :span="11">
+            <el-time-picker type="fixed-time" placeholder="选择时间" v-model="form.date2" style="width: 100%;"></el-time-picker>
+          </el-col>
+        </el-form-item>
 
-      </el-row>
+      </el-form>
       <el-row>
         添加日程+
       </el-row>
@@ -73,7 +70,7 @@
           </el-table-column>
         </el-table>
       </el-row>
-      <el-row>
+      <el-row class="mt1">
         <el-button type="primary" v-on:click="open2">快捷开班</el-button>
       </el-row>
 
@@ -82,9 +79,19 @@
 
 </template>
 <script>
+  import ElForm from "../../../node_modules/element-ui/packages/form/src/form.vue";
+  import ElFormItem from "../../../node_modules/element-ui/packages/form/src/form-item.vue";
+
   export default {
+    components: {
+      ElFormItem,
+      ElForm},
     data(){
       return{
+        form:{
+          date1: '',
+          date2: ''
+        },
         input:'',
         tableData: [{
           date: '2016-05-02',

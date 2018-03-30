@@ -1,7 +1,9 @@
 <template>
 
   <el-container>
-    <el-header class="t-center head-top">我要开课</el-header>
+    <el-header class="t-center head-top">
+      <router-link to="/"><i class="el-icon-arrow-left icon-back"></i></router-link>
+      我要开课</el-header>
     <el-main>
        <el-row :gutter="20">
          <el-col :span="12"><div class="bg-purple big-tab"><router-link to="/trainer/start-class">快速开班</router-link></div></el-col>
@@ -14,7 +16,7 @@
          <el-col :span="6"><div class="bg-purple-light  middle-tab"><router-link to="/trainer/survey">调研</router-link></div></el-col>
        </el-row>
       <el-tabs type="border-card" class="mt1" >
-        <el-tab-pane label="用户管理">
+        <el-tab-pane label="用户管理" v-model="courses">
           <span slot="label"><i class="el-icon-date"></i> 已开课程</span>
           <el-row v-for="(item) in courses"  class="mt1 bb p10">
             <el-col :span="4">
@@ -39,25 +41,25 @@
           </el-row>
 
         </el-tab-pane>
-        <el-tab-pane label="配置管理">
+        <el-tab-pane label="配置管理" v-model="tools">
           <span slot="label"><i class="el-icon-date"></i> 已发布工具</span>
-           <el-row v-for="(item) in tools">
+           <el-row v-for="(item) in tools" type="flex" align="middle">
              <el-col :span="16">
-               <div class="grid-content bg-purple">
-                 <p>{{item.title}}</p>
-                 <p>{{item.type}}<span>{{item.time}}</span></p>
-               </div>
+               <el-row class="mt1">
+                 <el-col class="tool-list-title">{{item.title}}</el-col>
+                 <el-col class="tool-list-content">{{item.type}}<span>{{item.time}}</span></el-col>
+               </el-row>
              </el-col>
 
              <el-col :span="8">
-               <div class="grid-content bg-purple">
+               <el-row class="mt1">
                  {{item.img}}
-               </div>
+               </el-row>
              </el-col>
 
            </el-row>
           <el-row>
-            <router-link to="#">查看更多</router-link>
+            <router-link to="#" class="view-more">查看更多</router-link>
           </el-row>
         </el-tab-pane>
       </el-tabs>
@@ -124,10 +126,23 @@
 <style scoped>
   .corner-btn{
     position:fixed;
-    right:20px;
-    bottom:40px;
+    right:10px;
+    bottom:10px;
   }
   .corner-btn i{
     font-size:1.4em;
+  }
+
+  .tool-list-title{
+    font-size:1em;
+    color:#606266;
+    text-align: left;
+    padding:4px 0px;
+  }
+  .tool-list-content{
+    font-size:0.8em;
+    color:#909399;
+    text-align: left;
+    padding:4px 0px;
   }
 </style>
