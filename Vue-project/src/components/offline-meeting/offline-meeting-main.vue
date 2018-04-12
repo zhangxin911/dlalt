@@ -25,7 +25,7 @@
          </el-row>
         <el-row class="training-date-tab" v-if="trainingStatus===true">
           <el-collapse v-model="activeName" accordion>
-            <el-collapse-item v-for="(item) in trainShedule"  v-model="trainShedule" v-bind:title="item.date" name="1">
+            <el-collapse-item v-for="(item) in trainShedule"  v-model="trainShedule" v-bind:title="item.date" v-bind:name="item.index">
               <el-row v-for="(val) in item.details">
                  <el-row class="mt1" >
                  <el-col :span="8" class="trainShedule-title">{{val.name}}</el-col>
@@ -89,6 +89,7 @@
          trainShedule:[
            {
              date:'1-15',
+             index:'1',
              details:[{
                name: '财务基础',
                teacher:'某老师',
@@ -114,6 +115,7 @@
            },
            {
              date:'1-16',
+             index:'2',
              details:[{
                name: '财务基础16',
                teacher:'某老师',
