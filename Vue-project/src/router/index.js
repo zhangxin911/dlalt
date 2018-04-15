@@ -24,7 +24,11 @@ export default new Router({
     {
       path:'/trainee',
       name:'traineeMain',
-      component:resolve=>require(['../components/trainee/trainee-main.vue'],resolve)
+      component:resolve=>require(['../components/trainee/trainee-main.vue'],resolve),
+      beforeEnter:function(to,from,next){
+          alert('未开发');
+          // next();
+      }
     },
     {
       path:'/trainee-info',
