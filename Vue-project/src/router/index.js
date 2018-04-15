@@ -9,6 +9,7 @@ Vue.use(ElementUI)
 
 
 export default new Router({
+  mode:'history',  //去除#, 使用html5 History模式
   routes: [
     {
       path: '/',
