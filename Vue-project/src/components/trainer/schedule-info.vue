@@ -48,7 +48,7 @@
   export default {
     components: {ElFooter},
     data(){
-      return {
+      return{
           activeNames: ['1'],
           scheduleData:[
             {
@@ -88,7 +88,7 @@
                 }
               ]
             }
-          ]
+          ],
       }
     }
   }

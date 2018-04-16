@@ -24,7 +24,7 @@
             </el-col>
             <el-col :span="2">
 
-             <router-link to="/trainee-info"><i class="el-icon-arrow-right "></i></router-link>
+             <router-link :to="{name:'traineeInfo'}"><i class="el-icon-arrow-right "></i></router-link>
             </el-col>
 
           </el-row>

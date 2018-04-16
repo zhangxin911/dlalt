@@ -7,58 +7,61 @@ Vue.use(Router)
 // Vue.use(elementJs)
 Vue.use(ElementUI)
 
-
+import trainee from '../components/trainee/trainee-main.vue'
+import traineeInfo from '../components/trainee/trainee-info.vue'
+import mainPage from '../components/mainPage.vue'
+import interestsTab from '../components/trainee/interests-tab.vue'
+import offlineMeetingMain from '../components/offline-meeting/offline-meeting-main.vue'
+import offlineMeetingRate from '../components/offline-meeting/offline-meeting-rate.vue'
+import userBind from '../components/user-bind.vue'
+import enrollInfo from '../components/enroll/enroll-info.vue'
 export default new Router({
   mode:'history',  //去除#, 使用html5 History模式
   routes: [
     {
       path: '/',
       name: 'mainPage',
-      component:resolve => require(['../components/mainPage.vue'],resolve)
+      component:mainPage
+
     },
     {
       path:'/home',
-      name:'home',
       component: resolve => require(['../components/home.vue'],resolve)
     },
     {
       path:'/trainee',
-      name:'traineeMain',
-      component:resolve=>require(['../components/trainee/trainee-main.vue'],resolve),
-      beforeEnter:function(to,from,next){
-          alert('未开发');
-          // next();
-      }
+      name:'trainee',
+      component:trainee,
     },
     {
       path:'/trainee-info',
       name:'traineeInfo',
-      component:resolve=>require(['../components/trainee/trainee-info.vue'],resolve)
+      component:traineeInfo
     },
     {
       path:'/trainee/interests-tab',
       name:'interestsTab',
-      component:resolve=>require(['../components/trainee/interests-tab.vue'],resolve)
+      component:interestsTab
     },
     {
       path:'/offline-meeting',
       name:'offline-meeting-main',
-      component:resolve=>require(['../components/offline-meeting/offline-meeting-main.vue'],resolve)
+      component:offlineMeetingMain
     },
     {
       path:'/offline-meeting-rate',
-      name:'offline-meeting-rate',
-      component:resolve=>require(['../components/offline-meeting/offline-meeting-rate.vue'],resolve)
+      name:'offlineMeetingRate',
+      component:offlineMeetingRate
     },
     {
       path:'/user-bind',
-      name:'user-bind',
-      component:resolve=>require(['../components/user-bind.vue'],resolve)
+      name:'userBind',
+      component:userBind
     },
     {
       path:'/enroll/enroll-info',
-      name:'enroll-info',
-      component:resolve=>require(['../components/enroll/enroll-info.vue'],resolve)
+      name:'enrollInfo',
+      component:enrollInfo
     },
     {
       path:'/enroll/enroll-success',
