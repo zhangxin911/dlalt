@@ -12,8 +12,8 @@
     </el-main>
     <el-footer class="foot-guide">
 
-      <el-col :span="12" class="grid-content foot-guide-item bg-border-lighter br"><router-link to="/trainee">我要上课</router-link></el-col>
-      <el-col :span="12" class="grid-content foot-guide-item"><router-link :to="{name:'traineeMain'}">我要开班</router-link></el-col>
+      <el-col :span="12" class="grid-content foot-guide-item bg-border-lighter br"><router-link :to="{name:'trainee'}">我要上课</router-link></el-col>
+      <el-col :span="12" class="grid-content foot-guide-item"><router-link :to="{name:'trainer'}">我要开班</router-link></el-col>
 
     </el-footer>
   </el-container>

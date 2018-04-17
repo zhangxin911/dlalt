@@ -15,18 +15,32 @@ import offlineMeetingMain from '../components/offline-meeting/offline-meeting-ma
 import offlineMeetingRate from '../components/offline-meeting/offline-meeting-rate.vue'
 import userBind from '../components/user-bind.vue'
 import enrollInfo from '../components/enroll/enroll-info.vue'
+import enrollSuccess from '../components/enroll/enroll-success.vue'
+import registerInfo from '../components/register/register-info.vue'
+import research from '../components/research/research.vue'
+import trainer from '../components/trainer/trainer-main.vue'
+import startClass from '../components/trainer/start-class.vue'
+import startSuccess from '../components/trainer/start-success.vue'
+import tCourseWare from '../components/trainer/courseware.vue'
+import register from '../components/trainer/register.vue'
+import enroll from '../components/trainer/enroll.vue'
+import survey from '../components/trainer/survey.vue'
+import trainData from '../components/trainer/train-data.vue'
+import tEnrollInfo from '../components/trainer/enroll-info.vue'
+import rateInfo from '../components/trainer/rate-info.vue'
+import scheduleInfo from '../components/trainer/schedule-info.vue'
+import scheduleAdd from '../components/trainer/schedule-add.vue'
+import questionnaire from '../components/trainer/questionnaire.vue'
+import questionnaireDetail from '../components/trainer/questionnaire-detail.vue'
+
+
 export default new Router({
   mode:'history',  //去除#, 使用html5 History模式
   routes: [
     {
       path: '/',
       name: 'mainPage',
-      component:mainPage
-
-    },
-    {
-      path:'/home',
-      component: resolve => require(['../components/home.vue'],resolve)
+      component:mainPage,
     },
     {
       path:'/trainee',
@@ -65,13 +79,13 @@ export default new Router({
     },
     {
       path:'/enroll/enroll-success',
-      name:'enroll-success',
-      component:resolve=>require(['../components/enroll/enroll-success.vue'],resolve)
+      name:'enrollSuccess',
+      component:enrollSuccess
     },
     {
       path:'/register/register-info',
-      name:'register-info',
-      component:resolve=>require(['../components/register/register-info.vue'],resolve)
+      name:'registerInfo',
+      component:registerInfo
     },
     {
       path:'/courseware/courseware',
@@ -81,75 +95,75 @@ export default new Router({
     {
       path:'/research/research',
       name:'research',
-      component:resolve=>require(['../components/research/research.vue'],resolve)
+      component:research
     },
     {
       path:'/trainer',
       name:'trainer',
-      component:resolve=>require(['../components/trainer/trainer-main.vue'],resolve)
+      component:trainer
     },
     {
       path:'/trainer/start-class',
       name:'start-class',
-      component:resolve=>require(['../components/trainer/start-class.vue'],resolve)
+      component:startClass
     },
     {
       path:'/trainer/start-success',
       name:'start-success',
-      component:resolve=>require(['../components/trainer/start-success.vue'],resolve)
+      component:startSuccess
     },
     {
       path:'/trainer/courseware',
-      name:'courseware',
-      component:resolve=>require(['../components/trainer/courseware.vue'],resolve)
+      name:'tCourseWare',
+      component:tCourseWare
     },
     {
       path:'/trainer/register',
       name:'register',
-      component:resolve=>require(['../components/trainer/register.vue'],resolve)
+      component:register
     },
     {
       path:'/trainer/enroll',
       name:'enroll',
-      component:resolve=>require(['../components/trainer/enroll.vue'],resolve)
+      component:enroll
     },
     {
       path:'/trainer/survey',
       name:'survey',
-      component:resolve=>require(['../components/trainer/survey.vue'],resolve)
+      component:survey
     },
     {
       path:'/trainer/train-data',
-      name:'train-data',
-      component:resolve=>require(['../components/trainer/train-data.vue'],resolve)
+      name:'trainData',
+      component:trainData
     },
     {
       path:'/train-data/enroll-info',
-      name:'enroll-info',
-      component:resolve=>require(['../components/trainer/enroll-info.vue'],resolve)
+      name:'tEnrollInfo',
+      component:tEnrollInfo
     },
     {
       path:'/train-data/rate-info',
-      name:'rate-info',
-      component:resolve=>require(['../components/trainer/rate-info.vue'],resolve)
+      name:'rateInfo',
+      component:rateInfo
     },
     {
       path:'/train-data/schedule-info',
-      name:'schedule-info',
-      component:resolve=>require(['../components/trainer/schedule-info.vue'],resolve)
+      name:'scheduleInfo',
+      component:scheduleInfo
     },
     {
       path:'/train-data/schedule-add',
       name:'schedule-add',
-      component:resolve=>require(['../components/trainer/schedule-add.vue'],resolve)
+      component:scheduleAdd
     },{
       path:'/train-data/questionnaire',
       name:'questionnaire',
-      component:resolve=>require(['../components/trainer/questionnaire.vue'],resolve)
+      component:questionnaire
     },{
       path:'/train-data/questionnaire-detail',
-      name:'questionnaire',
-      component:resolve=>require(['../components/trainer/questionnaire-detail.vue'],resolve)
+      name:'questionnaireDetail',
+      component:questionnaireDetail
     }
   ]
 })
