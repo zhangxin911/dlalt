@@ -31,6 +31,7 @@
     methods:{
       changeUser(){
          store.state.word='has changed!';
+         console.log(store.state.userData);
       }
     }
   }
