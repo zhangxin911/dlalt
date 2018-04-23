@@ -10,7 +10,8 @@ const store = new Vuex.Store({
     //设置属性
     userData:{
 
-    }
+    },
+    userInterest:['办公效率','人力资源1','人际沟通']
   },
   getters:{
     //获取属性
@@ -19,6 +20,9 @@ const store = new Vuex.Store({
     //获取属性
     getUserData(state,data){
       state.userData=data;
+    },
+    changeUserInterest(state,data){
+      state.userInterest=Array.from(data);
     }
   },
   actions:{

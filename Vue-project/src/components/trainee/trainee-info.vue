@@ -50,7 +50,7 @@
 
 </template>
 <script>
-
+  import store from '../../vuex/store'
   export default {
     data(){
       return{
@@ -61,11 +61,13 @@
            organization:'机构',
            duties:'主管',
            status:'学员',
-           interest:['办公效率','人力资源','人际沟通']
+          // interest:['办公效率','人力资源','人际沟通']
+           interest:store.state.userInterest
          }
       }
     }
   }
+
 </script>
 <style scoped="">
 .interests-choose{

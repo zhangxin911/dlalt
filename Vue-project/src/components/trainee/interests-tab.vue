@@ -27,7 +27,7 @@
       </el-row>
       <el-row class="mt1">
         <el-button><router-link to="/trainee-info">取消</router-link></el-button>
-        <el-button type="primary" ><router-link to="/trainee-info">确定选择</router-link></el-button>
+        <el-button type="primary" v-on:click="changeInterest"><router-link to="/trainee-info" >确定选择</router-link></el-button>
       </el-row>
 
     </el-main>
@@ -37,11 +37,12 @@
 
   import ElButton from "../../../node_modules/element-ui/packages/button/src/button.vue";
   import ElRow from "element-ui/packages/row/src/row";
-
+  import store from '../../vuex/store'
   export default{
     components: {
       ElRow,
-      ElButton},
+      ElButton
+    },
     data(){
       return{
          career:[
@@ -90,8 +91,20 @@
            }
          ]
       }
+    },
+    methods:{
+      changeInterest(){
+        let labels=Array.from(document.querySelectorAll('.is-checked .el-checkbox__label'));
+        let newLabels=new Set();
+         labels.map(function(item){
+           newLabels.add(item.innerText);
+         });
+         console.log(newLabels);
+         store.commit('changeUserInterest',newLabels);
+      }
     }
   }
+
 </script>
 
 <style scoped>
