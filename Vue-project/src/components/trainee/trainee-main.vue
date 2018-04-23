@@ -2,7 +2,7 @@
 
     <el-container>
       <el-header class="t-center head-top">
-        <router-link to="/"><i class="el-icon-arrow-left icon-back"></i></router-link>日程表
+        <router-link :to="{name:'mainPage'}"><i class="el-icon-arrow-left icon-back"></i></router-link>日程表
       </el-header>
       <el-main>
 
@@ -33,7 +33,7 @@
             一周日期
         </div>
         <!--有课程-->
-        <div  v-show="isCoursed" v-model="meetInfo">
+        <div v-show="isCoursed" v-model="meetInfo">
             <el-row class="meetinfo-box bb p10" :gutter="20"  v-for="(item,index) in meetInfo"  type="flex" align="middle">
                  <el-col :span="4" style="vertical-align: middle" >
                      <img src="../../../build/logo.png" width="50" height="50" >

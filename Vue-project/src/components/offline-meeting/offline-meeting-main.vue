@@ -42,7 +42,7 @@
 
           </el-collapse>
           <el-row class="mt1">
-            <el-button type="primary"><router-link to="/enroll/enroll-info">报名</router-link></el-button>
+            <el-button type="primary"><router-link :to="{name:'enrollInfo'}">报名</router-link></el-button>
           </el-row>
         </el-row>
 

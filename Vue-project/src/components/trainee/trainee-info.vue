@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-header class="t-center head-top">
-      <router-link to="/trainee"><i class="el-icon-arrow-left icon-back"></i></router-link>个人信息</el-header>
+      <router-link :to="{name:'mainPage'}"><i class="el-icon-arrow-left icon-back"></i></router-link>个人信息</el-header>
     <el-main>
       <el-card class="box-card">
         <div slot="header" class="clearfix">
@@ -34,7 +34,8 @@
             </el-form-item>
 
             <el-row>
-              <router-link to="trainee/interests-tab" class="interests-choose">标签选择</router-link>
+              <!--<router-link to="trainee/interests-tab" class="interests-choose">标签选择</router-link>-->
+              <router-link :to="{name:'interestsTab'}" class="interests-choose">标签选择</router-link>
             </el-row>
 
           </el-form>
@@ -43,7 +44,7 @@
 
       </el-card>
       <div class="mt1">
-        <el-button type="primary"><router-link to="/trainee">返回主页</router-link></el-button>
+        <el-button type="primary"><router-link :to="{name:'trainee'}">返回主页</router-link></el-button>
       </div>
     </el-main>
   </el-container>
@@ -75,5 +76,4 @@
   color:#67C23A;
   text-decoration: underline;
 }
-
 </style>

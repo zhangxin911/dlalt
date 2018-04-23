@@ -59,7 +59,7 @@ export default new Router({
     },
     {
       path:'/offline-meeting',
-      name:'offline-meeting-main',
+      name:'offlineMeetingMain',
       component:offlineMeetingMain
     },
     {

@@ -99,7 +99,6 @@
          labels.map(function(item){
            newLabels.add(item.innerText);
          });
-         console.log(newLabels);
          store.commit('changeUserInterest',newLabels);
       }
     }
