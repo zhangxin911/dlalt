@@ -36,9 +36,19 @@ Page({
       //
       //     console.log(res);
       // });
+      let that=this;
       promiseRequest('https://jsonplaceholder.typicode.com/posts/1',function(res){
         "use strict";
         console.log(res);
+           if(res.statusCode===200){
+              that.setData({
+                  'userInfo.userName':res.data.name,
+                  'userInfo.userApart':res.data.title,
+                  'userInfo.userNumber':1231231331
+
+              });
+           }
+
       },function(){
         "use strict";
        console.log('error');
