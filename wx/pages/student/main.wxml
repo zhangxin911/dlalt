@@ -1,6 +1,18 @@
 <!--index.wxml-->
-<view class="container">
-    <view>
-
+<view class="topContainer">
+    <view class="topInfo">
+       <view class="topLeft">
+          <image src="../../images/logo.png" mode="aspectFit"></image>
+       </view>
+       <view class="topRight">
+           <view class="userInfo">
+               <view class="userInfo-item">{{userInfo.userName}}</view>
+               <view class="userInfo-item">{{userInfo.userApart}}</view>
+               <view class="userInfo-item">{{userInfo.userNumber}}</view>
+           </view>
+           <view class="turnTo">
+               <navigator url="#"> > </navigator>
+           </view>
+       </view>
     </view>
 </view>
