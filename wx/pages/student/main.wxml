@@ -1,4 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-   student
+    <view>
+
+    </view>
 </view>
