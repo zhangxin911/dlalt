@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .product-list{
+        display:flex;
+        flex-direction: row;
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<body>
+   <div id="cart">
+       <div class="product-list" v-for="(item,index) in productList">
+           <div>
+               <div>{{item.name}} *******</div>
+               <div>
+                   {{item.price|toRmb(item.price)}}
+               </div>
+               <div> singleCount:{{item.price*item.productCount | toRmb(item.price*item.productCount)}}</div>
+           </div>
+           <div><span  v-on:click="reduceProduct(item)">-</span>
+               <input type="text" v-model="item.productCount">
+               <!--{{item.productCount}}-->
+               <span v-on:click="addProduct(item)">+</span>
+           </div>
+           <div v-on:click="deleteProduct(item,index)">
+               delete
+           </div>
+       </div>
+       <div>totalCount:{{getTotalCount | toRmb(getTotalCount)}}</div>
+   </div>
+</body>
+
+<script>
+    new Vue({
+        el:'#cart',
+        data:{
+            productList:[{
+                name:'product1',
+                price:100,
+                productId:'01',
+                productCount:1
+            },{
+
+                name:'product2',
+                price:200,
+                productId:'02',
+                productCount:1
+            },{
+
+                name:'product3',
+                price:300,
+                productId:'03',
+                productCount:1
+            }]
+        },
+        computed:{
+           getTotalCount:function(){
+               let totalCount=0;
+               this.productList.forEach((item,index)=>{
+                  totalCount+=item.price*item.productCount;
+               });
+               return totalCount;
+           }
+        },
+        methods:{
+            addProduct(product){
+                product.productCount++;
+            },
+            reduceProduct(product){
+                if(product.productCount<2){
+                    product.productCount=1;
+                    return;
+                }else{
+                    product.productCount--;
+                }
+
+            },
+            deleteProduct(product,index){
+                this.productList.splice(index,1)
+            }
+        },
+        filters:{
+            toRmb:function (price) {
+                return `$${price}`;
+            }
+        }
+    });
+</script>
+</html>
