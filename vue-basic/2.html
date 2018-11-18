@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<style>
+	.vbClass{
+		color:red;
+	}
+</style>
+<body>
+	<div id="app" v-on:click="say">{{name}}
+ 		<div v-if="true">show</div>
+ 		<div v-if="false">hide</div>
+ 		<div v-show="showed">pppp</div>
+ 		<div>{{get1}} {{singleValue}}</div>
+ 		<div v-bind:class="{vbClass}">v-bind</div>
+	</div>
+</body>
+<script type="text/javascript">
+	new Vue({
+		el:'#app',
+		data:{
+			name:'HuHu',
+			showed:true,
+			year:100,
+			vbClass:'vbClass'
+		},
+		methods:{
+			say:function(){
+			console.log(1);
+			}
+		},
+		computed:{
+			get1:function(){
+				return ++this.year;
+			},
+			singleValue:()=>{
+				return 'single'
+			}
+		}
+		
+	})
+
+
+</script>
+
+</html>
