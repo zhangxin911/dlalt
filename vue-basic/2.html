@@ -16,16 +16,82 @@
  		<div v-show="showed">pppp</div>
  		<div>{{get1}} {{singleValue}}</div>
  		<div v-bind:class="{vbClass}">v-bind</div>
+ 		<input v-model="inputVal"> {{inputVal}}
 	</div>
+	<div id="basic"> 
+		<father f_value='100'></father>
+	</div>
+	<template id="father">
+		<div @click="f_click">this is father:{{f_name}} {{value_get}}<son @show-son="changeFVal" @click="add"></son></div>
+	</template>
+	<template id="son">
+		<div >
+			son
+		</div>
+	</template>
 </body>
 <script type="text/javascript">
+
+
+	Vue.component('father',{
+		template:'#father',
+		data:function(){
+			return {
+				f_name:'father data',
+				value_get:this.f_value
+			}
+		},
+		props:['f_value'],
+		methods:{
+			f_click:function(){
+				// alert('father')
+				console.log(this.f_value);
+			},
+			changeFVal:function(data){
+				console.log(data);
+				this.value_get=data.a;
+			},
+			add:function(data){
+				this.value_get=data.a+500;
+			}
+			
+		},
+		mounted:function(){
+			
+		}
+	});
+
+	Vue.component('son',{
+		template:'#son',
+		methods:{
+			showSon:function(){
+				this.$emit('show-son',{
+					a:400,b:2
+				});
+			}
+		},
+		mounted:function(){
+			 this.$emit('show-son',{
+					a:300,b:2
+			});
+		}
+	});
+
+	new Vue({
+		el:'#basic'
+	})
+
 	new Vue({
 		el:'#app',
+		component:{
+
+		},
 		data:{
 			name:'HuHu',
 			showed:true,
 			year:100,
-			vbClass:'vbClass'
+			vbClass:'vbClass',
+			inputVal:''
 		},
 		methods:{
 			say:function(){

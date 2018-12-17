@@ -32,9 +32,15 @@
        </div>
        <div>totalCount:{{getTotalCount | toRmb(getTotalCount)}}</div>
    </div>
+
+   <div id="app1">
+     
+   </div>
 </body>
 
-<script>
+<script type="module">
+    import any from './1.js';
+
     new Vue({
         el:'#cart',
         data:{
@@ -89,6 +95,13 @@
             }
         }
     });
+
+    new Vue({
+      el:'#app1',
+      comonents:{
+        
+      }
+    })
 </script>
 
 </html>
